@@ -1,3 +1,6 @@
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -6,25 +9,24 @@ module.exports = {
     theme: {
         container: {
             center: true,
-            padding: '15px',
+            padding: '12px',
             screens: {
-                sm: '375px',
+                sm: '100%',
                 md: '575px',
                 lg: '767px',
-                xl: '1200px',
+                xl: '1476px',
             },
         },
         colors: {
-            'primary': '#1752ca',
-            'black': '#16140f',
+            'black': '#000000',
             'white': '#FFFFFF',
         },
         extend: {
             fontSize: {
-                '4xl': ['40px', '1'],
+                '4xl': ['44px', '1.2'],
             },
         },
     },
-    plugins: [],
+    plugins: [forms, typography],
 };
 

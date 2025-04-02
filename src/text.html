@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body class="flex flex-col min-h-screen">
+<load
+="partials/header.html" />
+
+<main class="container relative mb-12">
+    <div class="absolute top-[180px] -left-[180px] -rotate-90">
+        <ul class="flex gap-10">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Vkontakte</a></li>
+            <li><a href="#">Telegram</a></li>
+        </ul>
+    </div>
+    <article class="prose max-w-max text-xl">
+        <h1 class="text-4xl font-normal">О нас</h1>
+        <p>
+            Медицинский центр Сонекс – это передовая медицинская организация, предоставляющая высококачественные
+            медицинские услуги для всех возрастных групп. Наши специалисты используют современные технологии и
+            методы для диагностики и лечения различных заболеваний. Мы стремимся создать максимально комфортные
+            условия для наших пациентов и обеспечить им высокий уровень ухода.
+        </p>
+
+        <p>
+            Медицинский центр Сонекс гордится своими квалифицированными врачами и медицинским персоналом,
+            которые всегда готовы помочь вам и вашим близким. Мы стремимся к тому, чтобы каждый пациент
+            оставался доволен нашим уровнем обслуживания и получал необходимую помощь в кратчайшие сроки.
+        </p>
+        <h2>Направления работы</h2>
+        <ol>
+            <li>
+                Медицинский центр Сонэкс предлагает множество преимуществ, которые выделяют его среди других
+                медицинских учреждений:
+            </li>
+            <li>
+                Высококвалифицированный персонал: В центре работают опытные врачи с многолетним стажем,
+                обеспечивая профессиональный подход к каждому пациенту.
+            </li>
+
+            <li>
+                Современное оборудование: Центр оснащен передовыми технологиями для точной диагностики и
+                эффективного лечения.
+            </li>
+            <li>
+                Широкий спектр услуг: От ультразвуковой диагностики до физиотерапии и массажа — все это доступно
+                пациентам центра.
+            </li>
+            <li>
+                Удобный график работы: Центр работает ежедневно с 08:00 до 21:00, что позволяет пациентам
+                выбирать удобное для них время посещения.
+            </li>
+        </ol>
+        <h3>Атмосфера студии</h3>
+        <ul>
+            <li>
+                Медицинский центр Сонэкс предлагает множество преимуществ, которые выделяют его среди других
+                медицинских учреждений:
+            </li>
+            <li>
+                Высококвалифицированный персонал: В центре работают опытные врачи с многолетним стажем,
+                обеспечивая профессиональный подход
+            </li>
+            <li>
+                Современное оборудование: Центр оснащен передовыми технологиями для точной диагностики и
+                эффективного лечения.
+            </li>
+            <li>
+                Широкий спектр услуг: От ультразвуковой диагностики до физиотерапии и массажа — все это доступно
+                пациентам центра.
+            </li>
+            <li>
+                Удобный график работы: Центр работает ежедневно с 08:00 до 21:00, что позволяет пациентам
+                выбирать удобное для них время посещения.
+            </li>
+        </ul>
+    </article>
+    <div class="mt-10 text-4xl uppercase mb-6">
+        Остались вопосы? <br />
+        напишите нам!
+    </div>
+    <form action="#">
+        <div class="mb-4">
+            <input type="text" class="form-input w-full max-w-[575px]" placeholder="ФИО" aria-label="ФИО" />
+        </div>
+        <div class="mb-4">
+            <input
+                type="text"
+                class="form-input w-full max-w-[575px]"
+                placeholder="Ел. почта"
+                aria-label="Ел. почта"
+            />
+        </div>
+        <div class="mb-4">
+            <input
+                type="text"
+                class="form-input w-full max-w-[575px]"
+                placeholder="Телефон"
+                aria-label="Телефон"
+            />
+        </div>
+        <div class="mb-6">
+                    <textarea
+                        name=""
+                        id=""
+                        class="form-input h-[142px] w-full max-w-[575px] resize-none"
+                        aria-label="Сообщение"
+                        placeholder="Сообщение"
+                    ></textarea>
+        </div>
+        <div class="mb-10 flex items-center gap-4">
+            <input
+                type="checkbox"
+                id="rule"
+                name="rule"
+                checked
+                class="form-checkbox size-7 rounded-[10px] text-black focus:shadow-none focus:outline-0 focus:ring-0 focus:ring-offset-0"
+            />
+            <label for="rule" class="cursor-pointer text-xl">
+                Согласен(а) на обработку персональных данных
+            </label>
+        </div>
+        <button type="submit" class="btn btn-black">Купить</button>
+    </form>
+</main>
+<load
+="partials/footer.html" />
+</body>
+</html>

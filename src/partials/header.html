@@ -1,4 +1,31 @@
-<header id="header">
-    <div class="container py-2">
+<header id="header" class="mb-5">
+    <div class="container py-5 flex justify-between items-center flex-wrap">
+        <img src="img/logo.png" alt="" loading="lazy" class="order-0 size-[100px] xl:size-[130px]">
+        <div class="menu order-2 xl:order-1">
+            <button type="button" class="btn-menu">
+                <i class="icon-burger"></i>
+            </button>
+            <ul>
+                <li><a href="#">Главная </a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#"> Галерея работ</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-5 order-1  xl:order-2">
+            <a href="tel:79183249988" class="xl:text-xl">+7 (918) 324 99 88</a>
+            <div class="flex gap-2.5">
+                <a href="#">
+                    <svg class="icon-telegram size-8 xl:size-12">
+                        <use href="#icon-telegram"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon-wa size-8 xl:size-12">
+                        <use href="#icon-wa"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 </header>

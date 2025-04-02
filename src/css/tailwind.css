@@ -13,3 +13,197 @@
         font-style: normal;
     }
 }
+
+@layer components {
+    .btn {
+        @apply px-8 xl:px-10 py-4 xl:py-6 rounded-full xl:min-w-[351px] max-w-full inline-flex justify-center text-xl xl:text-[28px] transition-all;
+
+        &.btn-black {
+            @apply bg-black text-white;
+
+            &:hover {
+                @apply bg-[#373737];
+            }
+        }
+
+        &[disabled] {
+            @apply opacity-50 cursor-not-allowed;
+        }
+    }
+
+    .menu {
+        @apply w-full xl:w-auto mt-4 xl:mt-0;
+
+        ul {
+            @apply invisible max-h-0 opacity-0 flex flex-col xl:flex-row gap-4 xl:gap-10 text-xl text-center transition-all;
+
+            &.open {
+                @apply visible opacity-100 max-h-[1000px] mt-4 xl:mt-0;
+            }
+        }
+    }
+
+    .btn-menu {
+        @apply mt-4 flex w-full items-center justify-center xl:hidden;
+
+        .icon-burger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #000;
+            position: relative;
+            transition: 0.3s all;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 24px;
+                height: 2px;
+                background: #000;
+                transition: 0.3s all;
+            }
+
+            &:before {
+                transform: translateY(-8px);
+            }
+
+            &:after {
+                transform: translateY(8px);
+            }
+        }
+
+        &.active {
+            .icon-burger {
+                background: transparent;
+
+                &:before {
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .form-input {
+        @apply w-full px-6 xl:px-11 py-3 xl:py-6 border border-black rounded-[34px] text-lg;
+    }
+}
+
+.prose {
+    h2,
+    h3 {
+        font-size: 32px;
+        font-weight: normal;
+        margin-top: 0;
+    }
+
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+
+    a.btn {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0 0 0 12px;
+
+        li {
+            @apply relative pl-7 inline-block;
+
+            &:before {
+                content: '';
+                @apply absolute left-0 top-[8px] size-[15px] rounded-full bg-black;
+            }
+        }
+    }
+
+    p,
+    ul,
+    ol {
+        font-size: 20px;
+    }
+
+    ol {
+        list-style: none;
+        padding: 0 0 0 12px;
+        counter-set: list;
+
+        li {
+            @apply relative block pl-10;
+
+            &:before {
+                counter-increment: list;
+                content: counter(list);
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: #000;
+                width: 29px;
+                height: 29px;
+                color: #fff;
+                text-align: center;
+                font-size: 0.875rem;
+                line-height: 29px;
+                border-radius: 50%;
+            }
+
+            & + li {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    img {
+        margin: 0;
+    }
+
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splide__arrows {
+    @apply absolute top-1/2 transform -translate-y-1/2 left-0 right-0;
+    z-index: 10;
+
+    .splide__arrow {
+        @apply absolute top-1/2 transform -translate-y-1/2 ;
+
+        svg {
+            fill: #FFF;
+            opacity: 0.5;
+            width: 32px;
+            height: 55px;
+        }
+
+        &:hover {
+            svg {
+                opacity: 1;
+            }
+        }
+
+        &.splide__arrow--prev {
+            left: 16px;
+            transform: rotate(180deg) translateY(50%);
+        }
+
+        &.splide__arrow--next {
+            right: 16px;
+        }
+    }
+}
+
+.fancybox__content {
+    border-radius: 34px !important;
+}
